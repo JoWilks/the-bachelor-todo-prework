@@ -112,6 +112,6 @@ all_cont =[]
     end
   }
 
-total = (all_cont.inject { |a, b| a.to_i + b.to_i}) / all_cont.length
+total = (all_cont.inject { |a, b| a.to_f + b.to_f}) / all_cont.length
 
 end
