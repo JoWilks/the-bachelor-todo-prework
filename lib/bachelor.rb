@@ -87,15 +87,14 @@ occ =[]
 corr_occ = []
 occ.each {|key| #puts "#{key}" 
   key.each { |type, value| 
-    if type.to_s == "name"
+    if type.to_s == "occupation"
       corr_occ << value
     end
   } 
 }
 
-corr_occ
+corr_occ[0]
 end
-
 
 
 def get_average_age_for_season(data, season)
