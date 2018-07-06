@@ -103,7 +103,7 @@ all_cont =[]
   data.each {|s,contestants| 
     if s.to_s === season #puts "#{s} & #{contestants}"
         contestants.each {|cont_a| 
-          cont_a.each {|val_type, val| puts "#{val_type} & #{val}"             
+          cont_a.each {|val_type, val| @puts "#{val_type} & #{val}"             
               if val_type == :age
               all_cont << val
               end
