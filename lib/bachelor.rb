@@ -71,9 +71,32 @@ no_contestants =[]
 no_contestants.length
 end
 
+
 def get_occupation(data, hometown)
-  # code here
+occ =[]
+
+  data.each {|s,contestants| #puts "#{s} & #{contestants}"
+        contestants.each {|cont_a| #puts "#{cont_a}!!!"
+          cont_a.each {|val_type, val| #puts "#{val_type} & #{val}"
+              if val == hometown
+                occ << cont_a
+              end
+            }
+        }
+  }
+corr_occ = []
+occ.each {|key| #puts "#{key}" 
+  key.each { |type, value| 
+    if type.to_s == "name"
+      corr_occ << value
+    end
+  } 
+}
+
+corr_occ
 end
+
+
 
 def get_average_age_for_season(data, season)
   # code here
