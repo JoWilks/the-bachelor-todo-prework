@@ -27,9 +27,33 @@ winner.each {|key| puts "#{key}"
 end
 
 
-def get_contestant_name(data, occupation)
-    
+def get_contestant_name(data, job)
+contestant =[]
+
+  data.each {|s,contestants| #puts "#{s} & #{contestants}"
+        contestants.each {|cont_a| #puts "#{cont_a}!!!"
+          cont_a.each {|val_type, val| #puts "#{val_type} & #{val}"
+              if val == job
+                contestant << cont_a
+              end
+          }
+        }
+  }
+
+contestant
+
+contestant_name = []
+contestant.each {|key| #puts "#{key}" 
+  key.each { |type, value| 
+    if type.to_s == "name"
+      contestant_name << value
+    end
+  } 
+}
+
+contestant_name[0]
 end
+
 
 def count_contestants_by_hometown(data, hometown)
   # code here
