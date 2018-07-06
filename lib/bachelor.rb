@@ -56,7 +56,19 @@ end
 
 
 def count_contestants_by_hometown(data, hometown)
-  # code here
+no_contestants =[]
+
+  data.each {|s,contestants| #puts "#{s} & #{contestants}"
+        contestants.each {|cont_a| #puts "#{cont_a}!!!"
+          cont_a.each {|val_type, val| #puts "#{val_type} & #{val}"
+              if val == hometown
+                no_contestants << cont_a
+              end
+            }
+        }
+  }
+
+no_contestants.length
 end
 
 def get_occupation(data, hometown)
