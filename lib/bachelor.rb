@@ -115,5 +115,5 @@ all_cont =[]
 sum = all_cont.inject { |a, b| a.to_i + b.to_i} 
 l = all_cont.length.to_i
 puts sum
-l
+all_cont
 end
