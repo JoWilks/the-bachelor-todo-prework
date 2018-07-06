@@ -104,8 +104,8 @@ all_cont =[]
     if s.to_s === season 
         contestants.each {|cont_a| 
           cont_a.each {|val_type, val| 
-              if val_type == :age
-              all_cont << val
+              if val_type == "age"
+                all_cont << val
               end
           }
         }
