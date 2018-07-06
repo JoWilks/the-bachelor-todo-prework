@@ -26,6 +26,7 @@ winner.each {|key| puts "#{key}"
 (winner_name[0].split(" "))[0]
 end
 
+
 def get_contestant_name(data, occupation)
     
 end
